@@ -1,6 +1,12 @@
 const pkg = require('./package')
 
-module.exports = {
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g) || [];
+  }
+}
+
+const config = {
   mode: 'universal',
 
   /*
@@ -54,6 +60,13 @@ module.exports = {
   ** Build configuration
   */
   build: {
+
+    postcss: [
+      require('postcss-import'),
+      require('tailwindcss')('./tailwind.js'),
+      require('autoprefixer')
+    ],
+
     /*
     ** You can extend webpack config here
     */
@@ -62,3 +75,18 @@ module.exports = {
     }
   }
 }
+
+if (process.env.NODE_ENV === 'production') {
+  config.build.postcss.push(require('@fullhuman/postcss-purgecss')({
+    content: ['./**/*.vue'],
+    extractors: [
+      {
+        extractor: TailwindExtractor,
+        extensions: ['html', 'js', 'vue']
+      }
+    ]
+  }))
+  config.build.postcss.push(require('cssnano'))
+}
+
+module.exports = config;

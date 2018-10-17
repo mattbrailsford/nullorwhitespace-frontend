@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container md:bg-black">
     <div>
       <logo/>
       <h1 class="title">
