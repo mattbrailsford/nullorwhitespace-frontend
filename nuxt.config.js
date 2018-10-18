@@ -20,7 +20,7 @@ const config = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:800|Roboto:400,600,800' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:800|IBM+Plex+Sans:400,600,800' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
