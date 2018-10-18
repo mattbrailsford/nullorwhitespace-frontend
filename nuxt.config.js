@@ -20,6 +20,7 @@ const config = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:800|Roboto:400,600,800' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
@@ -57,7 +58,7 @@ const config = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
-    debug: true
+    //debug: true
   },
 
   /*
