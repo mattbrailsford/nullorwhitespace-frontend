@@ -40,6 +40,7 @@ const config = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/components'
   ],
 
   /*
@@ -49,11 +50,14 @@ const config = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios'
   ],
+
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
+    debug: true
   },
 
   /*
@@ -73,6 +77,31 @@ const config = {
     extend(config, ctx) {
       
     }
+  },
+
+  /*
+  ** Generate configuration
+  */
+  generate: {
+    // routes (callback) {
+
+    //   let routes = [];
+
+    //   let umbraco = UmbracoHeadless.createClient();
+    //   umbraco.query('/root//*[@isDoc]', 'XPath').getAll().then(resp => {
+
+    //     resp.results.forEach(node => {
+    //       routes.push({
+    //         route: node.url,
+    //         payload: node
+    //       })
+    //     });
+
+    //     callback(null, routes);
+
+    //   }).catch(callback)
+
+    // }
   }
 }
 
@@ -85,8 +114,8 @@ if (process.env.NODE_ENV === 'production') {
         extensions: ['html', 'js', 'vue']
       }
     ]
-  }))
-  config.build.postcss.push(require('cssnano'))
+  }),
+  require('cssnano'))
 }
 
 module.exports = config;
