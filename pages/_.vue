@@ -1,10 +1,8 @@
 <template>
-    <div>
-      <component v-if="pageModel && pageModel.contentTypeAlias" 
-        :key="pageModel.id"
-        :is="pageModel.contentTypeAlias" 
-        :model="pageModel"></component>
-    </div>
+  <component v-if="pageModel && pageModel.contentTypeAlias" 
+    :key="pageModel.id"
+    :is="pageModel.contentTypeAlias" 
+    :model="pageModel"></component>
 </template>
 
 <script>
