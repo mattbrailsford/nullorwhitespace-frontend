@@ -48,10 +48,17 @@ let colors = {
   'black': '#333',
   'black-10': 'rgba(51,51,51,0.1)',
   'black-20': 'rgba(51,51,51,0.2)',
+  'black-50': 'rgba(51,51,51,0.5)',
+  'black-90': 'rgba(51,51,51,0.9)',
   'white': '#ffffff',
   'white-10': 'rgba(255,255,255,0.1)',
   'white-20': 'rgba(255,255,255,0.2)',
-  'green': '#26de81'
+  'green': '#26de81',
+
+  'umbraco': '#ff6e00',
+  'github': '#24292e',
+  'twitter': '#1da1f2',
+  'linkedin': '#0077b5',
 }
 
 module.exports = {
@@ -208,7 +215,7 @@ module.exports = {
   */
 
   leading: {
-    'overlap': 0.85,
+    'overlap': 0.9,
     'none': 1,
     'tight': 1.25,
     'normal': 1.5,
@@ -851,6 +858,20 @@ module.exports = {
     //   // center: true,
     //   // padding: '1rem',
     // }),
+    require('./assets/css/plugins/ratio')({
+      ratios: {
+        'square': 1,
+        '32/27': 32/27,
+        '24/9': 24/9,
+        '16/9': 16/9,
+        '9/16': 9/16,
+        '8/9': 8/9,
+        '6/3': 6/3,
+        '4/3': 4/3,
+        '2/3': 2/3
+      },
+      variants: ['responsive'],
+    })
   ],
 
 

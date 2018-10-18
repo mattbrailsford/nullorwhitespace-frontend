@@ -12,21 +12,21 @@
           <a href="#" class="block p-8 sm:p-12 md:py-24 xl:py-32 text-black hover:text-green no-underline trans-color trans-fast">
             <div class="font-title font-bold leading-none text-3xl sm:text-5xl md:text-8xl text-black-20">2018.02.12 —</div>
             <div class="font-title font-bold leading-none text-3xl sm:text-5xl md:text-9xl">Sample news article</div>
-            <div class="font-body text-xl leading-normal pt-6 md:w-2/3 xl:w-1/2 mx-auto">How a book removed my fear of a personal website and reminded me that me learning new things can be valuable to others.</div>
+            <div class="font-body text-xl text-black leading-normal pt-6 md:w-2/3 xl:w-1/2 mx-auto">How a book removed my fear of a personal website and reminded me that me learning new things can be valuable to others.</div>
           </a>
         </li>
         <li>
           <a href="#" class="block p-8 sm:p-12 md:py-24 xl:py-32 text-black hover:text-green no-underline trans-color trans-fast">
             <div class="font-title font-bold leading-none text-3xl sm:text-5xl md:text-8xl text-black-20">2018.02.12 —</div>
             <div class="font-title font-bold leading-none text-3xl sm:text-5xl md:text-9xl">My first blog space</div>
-            <div class="font-body text-xl leading-normal pt-6 md:w-2/3 xl:w-1/2 mx-auto">How a book removed my fear of a personal website and reminded me that me learning new things can be valuable to others.</div>
+            <div class="font-body text-xl text-black leading-normal pt-6 md:w-2/3 xl:w-1/2 mx-auto">How a book removed my fear of a personal website and reminded me that me learning new things can be valuable to others.</div>
           </a>
         </li>
         <li>
           <a href="#" class="block p-8 sm:p-12 md:py-24 xl:py-32 text-black hover:text-green no-underline trans-color trans-fast">
             <div class="font-title font-bold leading-none text-3xl sm:text-5xl md:text-8xl text-black-20">2018.02.12 —</div>
             <div class="font-title font-bold leading-none text-3xl sm:text-5xl md:text-9xl">Adding estimated reading time to my blog posts</div>
-            <div class="font-body text-xl leading-normal pt-6 md:w-2/3 xl:w-1/2 mx-auto">How a book removed my fear of a personal website and reminded me that me learning new things can be valuable to others.</div>
+            <div class="font-body text-xl text-black leading-normal pt-6 md:w-2/3 xl:w-1/2 mx-auto">How a book removed my fear of a personal website and reminded me that me learning new things can be valuable to others.</div>
           </a>
         </li>
       </ul>
