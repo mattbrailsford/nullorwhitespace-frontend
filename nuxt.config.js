@@ -1,9 +1,16 @@
 const pkg = require('./package')
+const axios = require('axios')
 
 class TailwindExtractor {
   static extract(content) {
     return content.match(/[A-z0-9-:\/]+/g) || [];
   }
+}
+
+const axiosConfig = {
+  // See https://github.com/nuxt-community/axios-module#options
+  baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
+  //debug: true
 }
 
 const config = {
@@ -22,6 +29,9 @@ const config = {
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:800|IBM+Plex+Sans:400,600,800' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://cdn.polyfill.io/v2/polyfill.min.js' }
     ]
   },
 
@@ -55,11 +65,7 @@ const config = {
   /*
   ** Axios module configuration
   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
-    //debug: true
-  },
+  axios: axiosConfig,
 
   /*
   ** Build configuration
@@ -84,25 +90,22 @@ const config = {
   ** Generate configuration
   */
   generate: {
-    // routes (callback) {
+    routes (callback) {
 
-    //   let routes = [];
+      let routes = [];
 
-    //   let umbraco = UmbracoHeadless.createClient();
-    //   umbraco.query('/root//*[@isDoc]', 'XPath').getAll().then(resp => {
+      let a = axios.create(axiosConfig);
+      a.get('routes/').then(resp => {
 
-    //     resp.results.forEach(node => {
-    //       routes.push({
-    //         route: node.url,
-    //         payload: node
-    //       })
-    //     });
+        resp.data.forEach(route => {
+          routes.push(route);
+        });
 
-    //     callback(null, routes);
+        callback(null, routes);
 
-    //   }).catch(callback)
+      }).catch(callback)
 
-    // }
+    }
   }
 }
 
