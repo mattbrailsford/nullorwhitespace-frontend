@@ -49,6 +49,7 @@ let colors = {
   'black-10': 'rgba(51,51,51,0.1)',
   'black-20': 'rgba(51,51,51,0.2)',
   'black-50': 'rgba(51,51,51,0.5)',
+  'black-80': 'rgba(51,51,51,0.8)',
   'black-90': 'rgba(51,51,51,0.9)',
   'white': '#ffffff',
   'white-10': 'rgba(255,255,255,0.1)',

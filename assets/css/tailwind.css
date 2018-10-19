@@ -35,6 +35,7 @@
  * @import "components/buttons";
  * @import "components/forms";
  */
+@import "components/page";
 @import "components/container";
 @import "components/logo";
 
@@ -63,3 +64,4 @@
  * @import "utilities/skew-transforms";
  */
 @import "utilities/transitions";
+@import "utilities/object-fit";
