@@ -9,8 +9,8 @@ class TailwindExtractor {
 
 const axiosConfig = {
   // See https://github.com/nuxt-community/axios-module#options
-  //baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
-  baseURL: 'http://localhost:62301/',
+  baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
+  //baseURL: 'http://localhost:62301/',
   //debug: true
 }
 
@@ -33,13 +33,19 @@ const config = {
     ],
     script: [
       { src: 'https://cdn.polyfill.io/v2/polyfill.min.js' }
-    ]
+    ],
+    htmlAttrs: {
+      class: 'doc'
+    },
+    bodyAttrs: {
+      class: 'doc'
+    }
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#333' },
+  loading: { color: '#26de81' },
 
   /*
   ** Global CSS
@@ -113,6 +119,7 @@ const config = {
 if (process.env.NODE_ENV === 'production') {
   config.build.postcss.push(require('@fullhuman/postcss-purgecss')({
     content: ['./**/*.vue'],
+    whitelist: ['doc'],
     extractors: [
       {
         extractor: TailwindExtractor,
