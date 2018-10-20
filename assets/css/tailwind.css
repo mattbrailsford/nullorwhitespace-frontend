@@ -39,6 +39,7 @@
 @import "components/container";
 @import "components/logo";
 @import "components/halftone";
+@import "components/rte";
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
