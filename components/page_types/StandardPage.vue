@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  props:['model']
+  props:['page']
 }
 </script>
 

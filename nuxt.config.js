@@ -9,7 +9,8 @@ class TailwindExtractor {
 
 const axiosConfig = {
   // See https://github.com/nuxt-community/axios-module#options
-  baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
+  //baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
+  baseURL: 'http://localhost:62301/',
   //debug: true
 }
 
@@ -97,7 +98,7 @@ const config = {
       let a = axios.create(axiosConfig);
       a.get('routes/').then(resp => {
 
-        resp.data.forEach(route => {
+        resp.data.routes.forEach(route => {
           routes.push(route);
         });
 

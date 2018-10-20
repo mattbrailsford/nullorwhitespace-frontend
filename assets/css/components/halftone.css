@@ -1,0 +1,19 @@
+.halftone:before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: -20px;
+    width: 60%;
+    height: 100px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAR0lEQVQoU4XQWwoAIAgEwPXk1cmLDY0eaoI/7qCgAKjaCIp5kSjV+UQAWgYX4sUIHojbPfggD7rohiHaYYoMfpHBzj/9nj4AS7QUCgIegwgAAAAASUVORK5CYII=');
+    opacity: .2;
+    z-index: -1;
+}
+
+@screen md {
+    .halftone:before {
+        left: 5%;
+        width: 33.3%;
+        height: 150px;
+    }
+}

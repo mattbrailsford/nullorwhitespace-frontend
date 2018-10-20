@@ -38,6 +38,7 @@
 @import "components/page";
 @import "components/container";
 @import "components/logo";
+@import "components/halftone";
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
