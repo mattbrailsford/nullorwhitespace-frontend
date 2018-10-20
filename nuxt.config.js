@@ -120,7 +120,7 @@ if (process.env.NODE_ENV === 'production') {
   config.build.postcss.push(require('@fullhuman/postcss-purgecss')({
     content: ['./**/*.vue'],
     whitelist: ['doc'],
-    whitelistPatterns: ['twitter','umbraco','github','linkedin'],
+    whitelistPatterns: [/twitter/,/umbraco/,/github/,/linkedin/],
     extractors: [
       {
         extractor: TailwindExtractor,
