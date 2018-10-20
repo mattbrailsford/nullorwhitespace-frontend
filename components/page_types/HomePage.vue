@@ -7,7 +7,7 @@
           <span class="block text-green relative halftone">{{page.name}} —</span>
           {{page.intro}}</h1>
       </div>
-      <div class="absolute pin mt-8 sm:mt-12 md:mt-20 xl:mt-24 bg-cover bg-center z-0" style="background-image: url(/me.jpg)"></div>
+      <div class="absolute pin mt-8 sm:mt-12 md:mt-20 xl:mt-24 bg-cover bg-center z-0" :style="{ backgroundImage: 'url(' + page.image + ')' }"></div>
     </div>
 
     <blog-post-list :blog-posts="page.latestBlogPosts" />
