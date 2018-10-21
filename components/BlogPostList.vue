@@ -1,5 +1,5 @@
 <template>
-    <div class="relative py-8 sm:py-12 md:py-24 xl:py-32">
+    <div class="relative">
       <ul class="list-reset">
         <li v-for="blogPost in blogPosts" :key="blogPost.id">
           <blog-post-list-item :blog-post="blogPost" />

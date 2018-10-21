@@ -10,16 +10,22 @@
       <div class="absolute pin mt-8 sm:mt-12 md:mt-20 xl:mt-24 bg-cover bg-center z-0" :style="{ backgroundImage: 'url(' + page.image + ')' }"></div>
     </div>
 
-    <blog-post-list :blog-posts="page.latestBlogPosts" />
+    <div class="px-6 sm:px-8 py-8 sm:py-12 md:py-24 xl:py-32">
+      <blog-post-list :blog-posts="page.latestBlogPosts" />
+      <div class="pt-3 text-center">
+        <button-link to="/blog/">All Blog Posts</button-link>
+      </div>
+    </div>
 
   </div>
 </template>
 
 <script>
 import BlogPostList from '../BlogPostList';
+import ButtonLink from '../ButtonLink';
 
 export default {
   props:['page'],
-  components: { BlogPostList }
+  components: { BlogPostList, ButtonLink }
 }
 </script>

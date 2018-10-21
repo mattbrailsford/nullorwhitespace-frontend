@@ -9,9 +9,15 @@ class TailwindExtractor {
 
 const axiosConfig = {
   // See https://github.com/nuxt-community/axios-module#options
-  baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
-  //baseURL: 'http://localhost:62301/',
+  baseURL: 'http://localhost:62301/',
   //debug: true
+}
+
+if (process.env.NODE_ENV === 'production') {
+  axiosConfig = {
+    baseURL: 'https://nullorwhitespace.s1.umbraco.io/',
+    debug: false
+  }
 }
 
 const config = {
