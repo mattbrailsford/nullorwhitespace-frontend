@@ -4,7 +4,7 @@ export default function ({ $axios }) {
     if (process.browser && process.static) {
         $axios.defaults.baseURL = '/data'
         $axios.onRequest(config => {
-            console.log(config)
+            // console.log(config)
             let url = config.url.replace(/\/$/, "") + '.json';
             if (url === '.json') {
                 url = "index.json"

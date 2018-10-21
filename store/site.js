@@ -1,13 +1,9 @@
 export const state = () => ({
-    siteModelInited: false,
-    siteModel: {}
+    siteModel: false
 })
   
 export const mutations = {
-    setSiteModel (state, { model }) {
-       state.siteModel = model
-       state.siteModelInited = true
-    }
+    setSiteModel: (state, { model }) =>  state.siteModel = model
 }
 
 export const getters = {
@@ -16,8 +12,8 @@ export const getters = {
 
 export const actions = {
     async ensureSiteModel({ state, commit }) {
-        if (state.siteModelInited === false) {
-            let res = await this.$axios.get('/init/');
+        if (!state.siteModel) {
+            let res = await this.$axios.get('/init/')
             if (res && res.data){
                 commit('setSiteModel', { model: res.data })
             }

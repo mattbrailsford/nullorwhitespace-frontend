@@ -65,8 +65,9 @@ const config = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/axios',
     '@/plugins/components',
-    '@/plugins/axios'
+    '@/plugins/init',
   ],
 
   /*

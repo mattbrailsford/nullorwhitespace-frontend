@@ -9,7 +9,7 @@
 export default {
   async fetch({ store, route, payload }) {
     if (payload) {
-      store.dispatch('pages/setPageModel', { url: route.path, model: payload });
+      await store.dispatch('pages/setPageModel', { url: route.path, model: payload });
     } else {
       await store.dispatch('pages/ensurePageModel', route.path);
     }
