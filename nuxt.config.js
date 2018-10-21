@@ -7,7 +7,7 @@ class TailwindExtractor {
   }
 }
 
-const axiosConfig = {
+let axiosConfig = {
   // See https://github.com/nuxt-community/axios-module#options
   baseURL: 'http://localhost:62301/',
   //debug: true
