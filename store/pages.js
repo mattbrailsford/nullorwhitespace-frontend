@@ -15,10 +15,12 @@ export const getters = {
 }
 
 export const actions = {
-    async loadPageModel({ commit }, url) {
-        let res = await this.$axios.get(url);
-        if (res && res.data){
-            commit('setPageModel', { url, model: res.data })
+    async ensurePageModel({ state, commit }, url) {
+        if (!state.pageModels.hasOwnProperty(url)){
+            let res = await this.$axios.get(url);
+            if (res && res.data){
+                commit('setPageModel', { url, model: res.data })
+            }
         }
     },
     setPageModel({ commit }, { url, model }) {

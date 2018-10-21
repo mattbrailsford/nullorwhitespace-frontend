@@ -11,7 +11,7 @@ export default {
     if (payload) {
       store.dispatch('pages/setPageModel', { url: route.path, model: payload });
     } else {
-      await store.dispatch('pages/loadPageModel', route.path);
+      await store.dispatch('pages/ensurePageModel', route.path);
     }
   },
   computed: {
