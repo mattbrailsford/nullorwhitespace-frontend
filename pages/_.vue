@@ -7,11 +7,13 @@
 
 <script>
 export default {
-  async fetch({ store, route, payload }) {
-    if (payload) {
-      store.dispatch('pages/setPageModel', { url: route.path, model: payload });
-    } else {
-      await store.dispatch('pages/loadPageModel', route.path);
+  async fetch({ store, route, payload, isDev }) {
+    if (process.server || isDev) {
+      if (payload) {
+        store.dispatch('pages/setPageModel', { url: route.path, model: payload });
+      } else {
+        await store.dispatch('pages/loadPageModel', route.path);
+      }
     }
   },
   computed: {
