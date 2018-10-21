@@ -1,5 +1,6 @@
 const pkg = require('./package')
 const axios = require('axios')
+const { join } = require('path')
 
 class TailwindExtractor {
   static extract(content) {
@@ -64,7 +65,8 @@ const config = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/components'
+    '@/plugins/components',
+    '@/plugins/axios'
   ],
 
   /*
@@ -79,6 +81,10 @@ const config = {
   ** Axios module configuration
   */
   axios: axiosConfig,
+
+  env: {
+    dataDir: join(__dirname, 'dist/data')
+  },
 
   /*
   ** Build configuration
