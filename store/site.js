@@ -13,7 +13,7 @@ export const getters = {
 export const actions = {
     async ensureSiteModel({ state, commit }) {
         if (!state.siteModel) {
-            let res = await this.$axios.get('/init/')
+            let res = await this.$axios.get('/init/', { cache: true })
             if (res && res.data){
                 commit('setSiteModel', { model: res.data })
             }

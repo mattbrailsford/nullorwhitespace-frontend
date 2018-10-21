@@ -67,7 +67,6 @@ const config = {
   plugins: [
     '@/plugins/axios',
     '@/plugins/components',
-    '@/plugins/init',
   ],
 
   /*
