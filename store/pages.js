@@ -17,7 +17,7 @@ export const getters = {
 export const actions = {
     async ensurePageModel({ state, commit }, url) {
         if (!state.pageModels.hasOwnProperty(url)){
-            let res = await this.$axios.get(url, { storeLocally: true });
+            let res = await this.$axios.get(url, { staticCache: true });
             if (res && res.data){
                 commit('setPageModel', { url, model: res.data })
             }

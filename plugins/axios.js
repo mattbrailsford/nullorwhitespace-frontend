@@ -5,7 +5,7 @@ export default function ({ $axios }) {
     // Redirect static browser requests to data files
     if (process.browser && process.static) {
         $axios.onRequest(config => {
-            if (config.storeLocally){
+            if (config.staticCache){
                 config.baseURL = '/data'
                 let url = config.url.replace(/\/$/, "") + '.json'
                 if (url === '.json') {
@@ -24,7 +24,7 @@ export default function ({ $axios }) {
         const { writeFileSync } = require('fs')
 
         $axios.onResponse(async (response) => {
-            if (response.config.storeLocally) {
+            if (response.config.staticCache) {
                 let relativePath = response.request.path.replace(/\/$/, "") + '.json'
                 if (relativePath === '.json') {
                     relativePath = "index.json"
