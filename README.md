@@ -1,22 +1,18 @@
 # nullorwhitespace-frontend
 
-> Umbraco + HeadRest + Nuxt
+> Umbraco + HeadRest + Gridsome
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm install
+$ yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ gridsome dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+# build for production
+$ gridsome build
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, checkout [Gridseom docs](https://gridsome.org/).

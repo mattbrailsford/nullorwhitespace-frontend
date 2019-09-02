@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+@import "css/components/doc.css";
+@import "css/components/container.css";
+@import "css/components/logo.css";
+@import "css/components/halftone.css";
+@import "css/components/rte.css";
+
+@tailwind utilities;
+
+@import "css/utils/object-fit.css";
+@import "css/utils/transitions.css";
