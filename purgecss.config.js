@@ -21,6 +21,10 @@ module.exports = {
         'g-image',
         'g-image--lazy',
         'g-image--loaded',
+        'bg-twitter',
+        'bg-github',
+        'bg-umbraco',
+        'bg-linkedin'
     ],
     extractors: [
         {
