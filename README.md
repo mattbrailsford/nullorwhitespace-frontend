@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b92a1299-4b10-48d3-a74b-ee86c41c2c33/deploy-status)](https://app.netlify.com/sites/tender-bardeen-6cb815/deploys)
+
 # nullorwhitespace-frontend
 
 > Umbraco + HeadRest + Gridsome
