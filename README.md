@@ -15,4 +15,4 @@ $ gridsome dev
 $ gridsome build
 ```
 
-For detailed explanation on how things work, checkout [Gridseom docs](https://gridsome.org/).
+For detailed explanation on how things work, checkout [Gridsome docs](https://gridsome.org/).
