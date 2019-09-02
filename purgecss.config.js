@@ -21,10 +21,10 @@ module.exports = {
         'g-image',
         'g-image--lazy',
         'g-image--loaded',
-        'bg-twitter',
-        'bg-github',
-        'bg-umbraco',
-        'bg-linkedin'
+        'hover:bg-twitter',
+        'hover:bg-github',
+        'hover:bg-umbraco',
+        'hover:bg-linkedin'
     ],
     extractors: [
         {
